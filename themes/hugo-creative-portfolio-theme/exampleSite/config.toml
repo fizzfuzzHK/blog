@@ -7,11 +7,6 @@ disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = ""
 
-# Set html file to ./docs
-publishDir = "docs"
-
-canonifyurls = true
-
 [params]
   # Style options: default (pink), blue, green, pink, red, sea, violet
   # Use custom.css for your custom styling
