@@ -1,71 +1,113 @@
-theme = "harbor"
-baseurl = "fizzfuzzhk.github.io"
-title = "Hugo Themes"
-paginate = 3
-languageCode = "en"
+baseurl = "https://username.github.io"
 DefaultContentLanguage = "en"
-enableInlineShortcodes = true
-footnoteReturnLinkContents = "^"
+#DefaultContentLanguage = "ja"
+title = "Beautiful Hugo"
+theme = "beautifulhugo"
+metaDataFormat = "yaml"
+pygmentsStyle = "trac"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+#pygmentsUseClassic = true
+#pygmentOptions = "linenos=inline"
+#disqusShortname = "XXX"
+#googleAnalytics = "XXX"
 
-# Optional
-# If you use googleAnalytics, you set top-level options in config.toml to the beginning of the config file like other top-level options.
-googleAnalytics = "UA-XXXXXXXX-XX"
-# and disqus too.
-disqusShortName = "yourdisqusshortname"
+[Params]
+#  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
+  subtitle = "Build a beautiful and simple website in minutes"
+  mainSections = ["post","posts"]
+  logo = "img/avatar-icon.png" # Expecting square dimensions
+  favicon = "img/favicon.ico"
+  dateFormat = "January 2, 2006"
+  commit = false
+  rss = true
+  comments = true
+  readingTime = true
+  wordCount = true
+  useHLJS = true
+  socialShare = true
+  delayDisqus = true
+  showRelatedPosts = true
+#  hideAuthor = true
+#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
-[params.goatcounter]
-  domain="stats.domain.com"
+#[[Params.bigimg]]
+#  src = "img/triangle.jpg"
+#  desc = "Triangle"
+#[[Params.bigimg]]
+#  src = "img/sphere.jpg"
+#  desc = "Sphere"
+#  # position: see values of CSS background-position.
+#  position = "center top"
+#[[Params.bigimg]]
+#  src = "img/hexagon.jpg"
+#  desc = "Hexagon"
 
 [Author]
-  name = "Hugo Author"
+  name = "Some Person"
+  website = "yourwebsite.com"
+  email = "youremail@domain.com"
+  facebook = "username"
+  github = "username"
+  gitlab = "username"
+  bitbucket = "username"
+  twitter = "username"
+  reddit = "username"
+  linkedin = "username"
+  xing = "username"
+  stackoverflow = "users/XXXXXXX/username"
+  snapchat = "username"
+  instagram = "username"
+  youtube = "user/username" # or channel/channelname
+  soundcloud = "username"
+  spotify = "username"
+  bandcamp = "username"
+  itchio = "username"
+  vk = "username"
+  paypal = "username"
+  telegram = "username"
+  500px = "username"
+  codepen = "username"
+  mastodon = "url"
+  kaggle = "username"
+  weibo = "username"
+  slack = "username"
 
-[outputs]
-  section = ["JSON", "HTML"]
+[[menu.main]]
+    name = "Blog"
+    url = ""
+    weight = 1
 
-[[params.nav]]
-  identifier = "about"
-  name = "About"
-  icon = "fas fa-user fa-lg"
-  url = "/about/"
-  weight = 3
+[[menu.main]]
+    name = "About"
+    url = "page/about/"
+    weight = 3
 
-[[params.nav]]
-  identifier = "tags"
-  name = "Tags"
-  icon = "fas fa-tag fa-lg"
-  url = "tags"
-  weight = 3
+[[menu.main]]
+    identifier = "samples"
+    name = "Samples"
+    weight = 2
 
-[[params.nav]]
-  identifier = "categories"
-  name = "Category"
-  icon = "fas fa-folder-open fa-lg"
-  url = "categories"
-  weight = 3
+[[menu.main]]
+    parent = "samples"
+    name = "Big Image Sample"
+    url = "post/2017-03-07-bigimg-sample"
+    weight = 1
 
-[[params.nav]]
-  identifier = "search"
-  name = "Search"
-  icon = "fas fa-search fa-lg"
-  url = "search"
-  weight = 3
+[[menu.main]]
+    parent = "samples"
+    name = "Math Sample"
+    url = "post/2017-03-05-math-sample"
+    weight = 2
 
-[[params.nav]]
-  identifier = "archives"
-  name = "Archives"
-  icon = "fas fa-archive fa-lg"
-  url = "archives"
-  weight = 3
+[[menu.main]]
+    parent = "samples"
+    name = "Code Sample"
+    url = "post/2016-03-08-code-sample"
+    weight = 3
 
-# copy paste this block and change for each social media to add how many ever social media
-# acounts/links you want
-[[params.social]]
-  name="name of social media"
-  url="link to social media"
-  icon="A icon from https://fontawesome.com/"
-
-[params.logo]
-  url = "icon.png" # static/images/icon.png
-  width = 50
-  height = 50
-  alt = "Logo"
+[[menu.main]]
+    name = "Tags"
+    url = "tags"
+    weight = 3
